@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">AndroidEjemploREST</string>
+    <string name="app_name">Android</string>
     <string name="action_settings">Settings</string>
+
+    <string name="exit">Salir</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="authenticate">Autentificar</string>
+    <string name="noInternet">No hay una conexión de red disponible</string>
 </resources>
