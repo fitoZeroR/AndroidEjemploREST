@@ -1,25 +1,37 @@
-package fito.androidejemplorest.modelos;
+package fito.androidejemplorest.db.modelos;
 
 import com.google.gson.annotations.SerializedName;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
+@DatabaseTable
 public class Usuario implements Comparable {
     @SerializedName("id")
+    @DatabaseField(generatedId = true, columnName = "_id")
     private int id;
     @SerializedName("nombre")
+    @DatabaseField
     private String nombre;
     @SerializedName("apellidoPaterno")
+    @DatabaseField
     private String apellidoPaterno;
     @SerializedName("apellidoMaterno")
+    @DatabaseField
     private String apellidoMaterno;
     @SerializedName("usuario")
+    @DatabaseField
     private String usuario;
     @SerializedName("contraseña")
+    @DatabaseField
     private String contraseña;
     @SerializedName("domicilio")
+    @DatabaseField
     private String domicilio;
     @SerializedName("telefono")
+    @DatabaseField
     private String telefono;
     @SerializedName("tipoUsuario")
+    @DatabaseField
     private String tipoUsuario;
 
     public Usuario() {}
@@ -27,6 +39,17 @@ public class Usuario implements Comparable {
     public Usuario(int id, String nombre, String apellidoPaterno, String apellidoMaterno, String usuario, String contraseña, String domicilio, String telefono, String tipoUsuario) {
         this.id = id;
     	this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+        this.domicilio = domicilio;
+        this.telefono = telefono;
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public Usuario(String nombre, String apellidoPaterno, String apellidoMaterno, String usuario, String contraseña, String domicilio, String telefono, String tipoUsuario) {
+        this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.usuario = usuario;

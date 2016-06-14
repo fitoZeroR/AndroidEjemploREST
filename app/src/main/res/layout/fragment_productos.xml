@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProductosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/encabezadoTituloFrmProductoID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@color/brown"
+            android:layout_marginBottom="5dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tituloProductosID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DATOS DEL PRODUCTO"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/input_codigo"
+            android:layout_below="@id/encabezadoTituloFrmProductoID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:ms_hint="Codigo"
+            app:ms_enableFloatingLabel="true"
+            android:inputType="number" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/input_codigo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/usuarioFrmProductoID"
+                    android:inputType="number"
+                    android:hint="ID Usuario"
+                    android:gravity="center"
+                    android:background="@drawable/rectangle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:enabled="false"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nombreFrmProductoID"
+                    android:inputType="text"
+                    android:hint="Nombre"
+                    android:gravity="center"
+                    android:background="@drawable/rectangle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cantidadFrmProductoID"
+                    android:inputType="number"
+                    android:hint="Cantidad"
+                    android:gravity="center"
+                    android:background="@drawable/rectangle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descripcionFrmProductoID"
+                    android:inputType="text"
+                    android:hint="Descripción"
+                    android:gravity="center"
+                    android:background="@drawable/rectangle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save"
+                        android:id="@+id/guardarFrmProductoID"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/button_selector"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/consult"
+                        android:id="@+id/consultarFrmProductoID"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/button_selector"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clear"
+                        android:id="@+id/limpiarFrmProductoID"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/button_selector"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>
