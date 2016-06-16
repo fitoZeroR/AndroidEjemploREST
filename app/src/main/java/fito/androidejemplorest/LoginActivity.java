@@ -108,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                         //Si el usuario escrito es correcto, almacenamos la preferencia y entramos en la app
                         SharedPreferences settings = getSharedPreferences("PreferenciasEjemploAndroid", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = settings.edit();
-                        editor.putInt("id", usuario.getId());
+                        editor.putString("id", String.valueOf(usuario.getId()));
                         editor.putString("nombre", usuario.getNombre());
                         editor.putString("apellidoPaterno", usuario.getApellidoPaterno());
                         editor.putString("apellidoMaterno", usuario.getApellidoMaterno());

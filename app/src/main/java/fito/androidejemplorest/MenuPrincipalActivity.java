@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -77,8 +76,7 @@ public class MenuPrincipalActivity extends AppCompatActivity
         } else {
             boolean validaUsuario = true;
             for (Usuario usuario : listaUsuario) {
-                Log.d("Nombre Usuario = ",usuario.getNombre());
-                if (String.valueOf(usuario.getId()).equals(String.valueOf(prefs.getInt("id",-1)))) {
+                if (usuario.getUsuario().equals(prefs.getString("usuario","")) & usuario.getContraseña().equals(prefs.getString("contraseña", ""))) {
                     ((PrincipalAplication) getApplication()).setUsuario(usuario);
                     validaUsuario = false;
                 }
@@ -151,7 +149,7 @@ public class MenuPrincipalActivity extends AppCompatActivity
                 //Borramos el usuario almacenado en preferencias y volvemos a la pantalla de login
                 SharedPreferences settings = getSharedPreferences("PreferenciasEjemploAndroid", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = settings.edit();
-                editor.putInt("id", -1);
+                editor.putString("id", "");
                 editor.putString("nombre", "");
                 editor.putString("apellidoPaterno", "");
                 editor.putString("apellidoMaterno", "");

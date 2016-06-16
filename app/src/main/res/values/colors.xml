@@ -7,4 +7,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="brown">#b5723f</color>
     <color name="gray">#c1bdbd</color>
+
+    <color name="empty_gray">#B8BCC0</color>
+    <color name="alpha_gray_button">#80E6E6E6</color>
 </resources>

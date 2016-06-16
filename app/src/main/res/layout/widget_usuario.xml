@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#992870C9">
+
+    <RelativeLayout
+        android:id="@+id/layoutPrincipalWidgetID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tituloUsuariosWidgetID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATOS DEL USUARIO"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textStyle="bold|italic"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:layout_below="@id/tituloUsuariosWidgetID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/idLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="ID = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/nombreLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Nombre = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/apellidoPaternoLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Apellido Paterno = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/apellidoMaternoLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Apellido Materno = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/usuarioLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Usuario = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/contraseñaLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Contraseña = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/domicilioLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Domicilio = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/telefonoLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Telefono = "
+                android:textStyle="bold" />
+
+            <TextView android:id="@+id/tipoUsuarioLblWidgetID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Tipo Usuario = "
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/backWidgetID"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_list"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/back" />
+
+                <ImageButton
+                    android:id="@+id/nextWidgetID"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_item_list"
+                    android:padding="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/next" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
