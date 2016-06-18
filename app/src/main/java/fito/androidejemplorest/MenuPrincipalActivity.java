@@ -16,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.gms.gcm.GoogleCloudMessaging;
+
 import java.util.List;
 
 import butterknife.Bind;

@@ -88,4 +88,24 @@ public class NetConnection {
         responseHandler.onStart();
         VolleyUtils.getInstance().addToRequestQueue(myReq, tag);
     }
+
+    public static void registroClienteServidor(String usuario, String regId, StringVolleyListenerMessage responseHandler) {
+        Map<String, String> map = new HashMap<>();
+        map.put("usuario", usuario);
+        map.put("regGCM", regId);
+
+        String queryString = VolleyUtils.mapToQueryString(map);
+
+        String endpoint = "registro_cliente?"+queryString;
+        String WS_URL = BASE_WS_URL + endpoint;
+        final String tag = "fito"+endpoint;
+
+        Log.d("fito", WS_URL);
+
+        final StringRequest myReq = new StringRequest(Request.Method.GET, WS_URL, responseHandler, responseHandler);
+        myReq.setRetryPolicy(new DefaultRetryPolicy(DEFAULT_TIMEOUT, DEFAULT_RETRIES, DEFAULT_BACKOFF_MULTIPLIER));
+
+        responseHandler.onStart();
+        VolleyUtils.getInstance().addToRequestQueue(myReq, tag);
+    }
 }
